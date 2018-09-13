@@ -17,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 # Devise Authentication
 gem 'devise'
 gem 'devise-bootstrap-views'
+# Stock Quote
+gem 'stock_quote'
 # Bootstrap
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
