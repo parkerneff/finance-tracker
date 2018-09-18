@@ -13,7 +13,8 @@ class UsersController < ApplicationController
       flash.now[:danger] = "You have entered an empty search string"
     else
       @users = User.search(params[:search_param])
-      flash.now[:danger] = "No users found" if @users.blank?
+      @users = current_user.except_current_user(@users)
+      flash.now[:danger] = "No users found for the search criteria" if @users.blank?
     end
 
     respond_to do |format|
