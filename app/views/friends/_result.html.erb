@@ -4,7 +4,7 @@
   </div>
 <% end %>
 
-<% if !@users.blank? %>
+<% if @users && !@users.blank? %>
   <div id="friend-lookup-results" class="well results-block col-md-10">
     <table class="search-results-table col-md-12">
       <tbody>
